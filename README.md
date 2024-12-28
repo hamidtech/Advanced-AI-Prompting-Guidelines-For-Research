@@ -6,8 +6,8 @@
 Welcome to the **AI Prompt Maestro** repo! This project provides a curated set of guidelines and templates for researchers who want to leverage AI assistance at different stages of academic work—be it generating thesis ideas, exploring article angles, creating book outlines, crafting cross-disciplinary research titles, or discovering research gaps. 
 
 We’ve included two main guideline files:
-- **EnglishGuideline.md** (for English speakers)
-- **PersianGuideline.md** (برای فارسی‌زبانان)
+- [**EnglishGuideline.md**](EnglishGuideline.md) (به زبان انگلیسی)
+- [**PersianGuideline.md**](PersianGuideline.md) (به زبان فارسی)
 
 Within these guidelines, you’ll find detailed prompt structures, sample templates, and example-filled prompts—plus helpful tips on how to make your AI queries more effective. 🤩
 
@@ -36,5 +36,5 @@ This project is licensed under the [MIT License](./LICENSE), which means you’r
 Contributions are welcome! Feel free to submit a pull request or open an issue if you have any suggestions for new sections or improvements. 
 
 ## Contact
-For any questions or feedback, open an issue or send me [email](mailto:hamid1375jamali@gmail.com)
+For any questions or feedback, open an issue or send me an [Email](mailto:hamid1375jamali@gmail.com) :)
 
