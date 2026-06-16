@@ -1,45 +1,49 @@
-# AI Prompt Maestro: Advanced Research Guidance
+# AI Prompt Maestro: Advanced Research Prompting Guidelines
 
-**Your go-to repository for crafting effective AI prompts in academic and research contexts.** 🌱
+A practical guideline repository for researchers who use modern LLMs for academic ideation, literature review, research-gap discovery, structured extraction, writing support, and reproducible research workflows.
 
-## Overview
-Welcome to the **AI Prompt Maestro** repo! This project provides a curated set of guidelines and templates for researchers who want to leverage AI assistance at different stages of academic work—be it generating thesis ideas, exploring article angles, creating book outlines, crafting cross-disciplinary research titles, or discovering research gaps. 
+This repository was originally optimized for GPT-4o-style prompting. It has now been updated for newer LLM behavior: reasoning models, structured outputs, tool-enabled agents, multimodal input, long-context workflows, citation-aware research, and evaluation-driven prompt iteration.
 
-We’ve included these main guideline files:
-- [**EnglishGuideline.md**](EnglishGuideline.md) (به زبان انگلیسی)
-- [**PersianGuideline.md**](PersianGuideline.md) (به زبان فارسی)
+## Main Guides
 
-And now we have **a new file** for summarizing **Farsi/English academic references** in a single paragraph:
-- [**ThesisSummaryPrompt.md**](ThesisSummaryPrompt.md)
+- [ModernResearchPrompting.md](ModernResearchPrompting.md) — the recommended 2026 guide for current LLMs.
+- [EnglishGuideline.md](EnglishGuideline.md) — legacy English templates based on classic prompt formulas such as RTF, CTF, RASCEF, TAG, and RISE.
+- [PersianGuideline.md](PersianGuideline.md) — Persian version of the legacy templates.
+- [ThesisSummaryPrompt.md](ThesisSummaryPrompt.md) — Persian/English thesis and article summary prompt for literature-review paragraphs.
 
-Within these guidelines, you’ll find detailed prompt structures, sample templates, and example-filled prompts—plus helpful tips on how to make your AI queries more effective. 🤩
+## What Changed in the Modern Guide?
 
-## What’s Inside?
-1. **Focused Thesis Brainstormer**  
-   Create concise and impactful thesis topics using a structured approach.
-2. **Article Angle Explorer**  
-   Uncover unique angles and perspectives for your research articles.
-3. **Comprehensive Book Outline Generator**  
-   Plan your chapters from introduction to advanced discussions in a logical flow.
-4. **Cross-Disciplinary Research Title Maker**  
-   Generate intriguing titles that span multiple fields or disciplines.
-5. **Research Gap Finder**  
-   Identify underexplored areas in the literature and propose potential research questions.
-6. **Persian Thesis Literature Review Summaries**  
-   Summarize Persian-language references in a single paragraph for your literature review, following a clear structure.
+The new guide shifts from simple prompt wording to full research-task design:
 
-## Why Use These Guidelines?
-- **Time-Saving**: Quickly generate ideas without reinventing the wheel.
-- **Multi-Language Support**: Instructions available in both English and Persian.
-- **Structured**: Each set of prompts follows a clear pattern (Role, Task, Format, etc.).
-- **Customizable**: Adjust creativity levels, audience, and output format.
+1. Context engineering instead of only prompt engineering.
+2. Schema-first output design for tables, extraction, and machine-readable answers.
+3. Reasoning-aware prompting for complex research tasks.
+4. Tool-aware prompting for web search, file analysis, citation checking, code execution, and database/API workflows.
+5. Multimodal prompting for PDFs, figures, tables, charts, screenshots, and scanned material.
+6. Verification loops for hallucination control and source-grounded claims.
+7. Evaluation patterns for comparing prompt versions instead of guessing which one is better.
+8. Safer use of AI for academic work, including limitations, citation discipline, and privacy boundaries.
 
-----
+## Recommended Usage
+
+For new work, start with `ModernResearchPrompting.md`.
+
+Use the older English/Persian files when you need simple, copy-paste prompt templates for brainstorming or quick research ideation. Use the modern guide when accuracy, structure, reproducibility, or tool use matters.
+
+## Core Principle
+
+Modern LLM prompting is no longer just: “write a better instruction.”
+
+It is: define the task, provide the right context, choose the right model behavior, constrain the output, verify the result, and iterate with measurable criteria.
+
 ## License
-This project is licensed under the [MIT License](./LICENSE), which means you’re free to share and adapt the content as long as you give appropriate credit.
+
+This project is licensed under the [MIT License](./LICENSE), which means you are free to share and adapt the content as long as you give appropriate credit.
 
 ## Contributing
-Contributions are welcome! Feel free to submit a pull request or open an issue if you have any suggestions for new sections or improvements. 
+
+Contributions are welcome. Good contributions include new prompt patterns, tested examples, model-specific notes, evaluation checklists, academic integrity guidance, and bilingual Persian/English research workflows.
 
 ## Contact
-For any questions or feedback, open an issue or send me an [Email](mailto:hamid1375jamali@gmail.com) :)
+
+For questions or suggestions, open an issue or send me an [Email](mailto:hamid1375jamali@gmail.com).
