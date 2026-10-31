@@ -1,0 +1,18 @@
+{
+  "id": "WF-04",
+  "version": "2.0.0",
+  "name_en": "Paper to Evidence",
+  "name_fa": "از مقاله تا رکورد شاهد",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "prompt_ids": [
+    "RP-09"
+  ],
+  "updated": "2026-10-31",
+  "files": {
+    "en": "paper-to-evidence.md",
+    "fa": "paper-to-evidence.fa.md"
+  }
+}

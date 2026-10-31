@@ -1,0 +1,31 @@
+{
+  "id": "RP-10",
+  "version": "2.0.0",
+  "name_en": "Research Feasibility Assessor",
+  "name_fa": "ارزیاب امکان‌پذیری پژوهش",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "workflow_id": "WF-02",
+  "required_inputs": [
+    "CANDIDATE_TOPIC",
+    "RESOURCE_LIMITS"
+  ],
+  "optional_inputs": [
+    "DISCIPLINE",
+    "ACADEMIC_LEVEL",
+    "AVAILABLE_DATA",
+    "METHODOLOGICAL_PREFERENCE",
+    "TIME_CONSTRAINT",
+    "RESEARCH_CONTEXT",
+    "SOURCE_MATERIALS",
+    "EXPLORATION_MODE"
+  ],
+  "exploration_mode": "Balanced",
+  "updated": "2026-10-31",
+  "files": {
+    "en": "feasibility-assessor.md",
+    "fa": "feasibility-assessor.fa.md"
+  }
+}

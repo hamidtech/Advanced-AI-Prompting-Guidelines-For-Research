@@ -1,0 +1,50 @@
+{
+  "id": "EX-E01",
+  "source": {
+    "id": "DEMO-01",
+    "title": "Fictional teaching excerpt; not a published study",
+    "identifier": null,
+    "url": null,
+    "accessed": "2026-10-31",
+    "access_level": "excerpt"
+  },
+  "fields": {
+    "sample": {
+      "status": "reported",
+      "value": "Twelve interviews",
+      "source_id": "DEMO-01",
+      "page": null,
+      "section": "Methods",
+      "note": "Illustrative supplied excerpt only"
+    },
+    "effect_size": {
+      "status": "missing",
+      "value": null,
+      "source_id": null,
+      "page": null,
+      "section": null,
+      "note": "Not supplied"
+    },
+    "generalizability": {
+      "status": "ai_inference",
+      "value": "Cannot assess transferability from this excerpt alone",
+      "source_id": "DEMO-01",
+      "page": null,
+      "section": "Methods",
+      "note": "Reviewer interpretation, not the author’s statement"
+    },
+    "design": {
+      "status": "ambiguous",
+      "value": "Interview design; sampling approach unclear",
+      "source_id": "DEMO-01",
+      "page": null,
+      "section": "Methods",
+      "note": "No sampling detail in excerpt"
+    }
+  },
+  "verification": {
+    "status": "pending",
+    "reviewer": null,
+    "note": "Synthetic fixture; no real publication verified"
+  }
+}

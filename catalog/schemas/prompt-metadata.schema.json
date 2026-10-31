@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^RP-[0-9]{2}$"
+    },
+    "version": {
+      "const": "2.0.0"
+    },
+    "name_en": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name_fa": {
+      "type": "string",
+      "minLength": 1
+    },
+    "languages": {
+      "const": [
+        "en",
+        "fa"
+      ]
+    },
+    "updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "files": {
+      "type": "object",
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fa": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "en",
+        "fa"
+      ],
+      "additionalProperties": false
+    },
+    "workflow_id": {
+      "type": "string",
+      "pattern": "^WF-0[1-4]$"
+    },
+    "required_inputs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "optional_inputs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "exploration_mode": {
+      "enum": [
+        "Conservative",
+        "Balanced",
+        "Exploratory",
+        "Unconventional",
+        "conservative",
+        "balanced",
+        "exploratory",
+        "unconventional"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "version",
+    "name_en",
+    "name_fa",
+    "languages",
+    "updated",
+    "files",
+    "workflow_id",
+    "required_inputs",
+    "optional_inputs",
+    "exploration_mode"
+  ]
+}

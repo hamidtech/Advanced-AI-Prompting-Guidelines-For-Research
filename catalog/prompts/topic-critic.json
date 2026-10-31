@@ -1,0 +1,29 @@
+{
+  "id": "RP-07",
+  "version": "2.0.0",
+  "name_en": "Research Topic Critic",
+  "name_fa": "منتقد موضوع پژوهش",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "workflow_id": "WF-02",
+  "required_inputs": [
+    "CANDIDATE_TOPIC"
+  ],
+  "optional_inputs": [
+    "DISCIPLINE",
+    "ACADEMIC_LEVEL",
+    "AVAILABLE_DATA",
+    "SOURCE_MATERIALS",
+    "TIME_CONSTRAINT",
+    "RESEARCH_CONTEXT",
+    "EXPLORATION_MODE"
+  ],
+  "exploration_mode": "Balanced",
+  "updated": "2026-10-31",
+  "files": {
+    "en": "topic-critic.md",
+    "fa": "topic-critic.fa.md"
+  }
+}

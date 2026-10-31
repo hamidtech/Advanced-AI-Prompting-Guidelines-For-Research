@@ -1,0 +1,26 @@
+{
+  "id": "RP-09",
+  "version": "2.0.0",
+  "name_en": "Evidence-Grounded Literature Synthesizer",
+  "name_fa": "تلفیق‌گر ادبیات متکی بر شواهد",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "workflow_id": "WF-04",
+  "required_inputs": [
+    "SOURCE_MATERIALS",
+    "SYNTHESIS_QUESTION"
+  ],
+  "optional_inputs": [
+    "DISCIPLINE",
+    "RESEARCH_CONTEXT",
+    "EXPLORATION_MODE"
+  ],
+  "exploration_mode": "Balanced",
+  "updated": "2026-10-31",
+  "files": {
+    "en": "literature-synthesizer.md",
+    "fa": "literature-synthesizer.fa.md"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "topic": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposed_title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "research_problem": {
+      "type": "string",
+      "minLength": 1
+    },
+    "potential_contribution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "required_resources": {
+      "type": "string",
+      "minLength": 1
+    },
+    "feasibility": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uncertainty": {
+      "type": "string",
+      "minLength": 1
+    },
+    "next_validation_step": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_status": {
+      "enum": [
+        "hypothesis",
+        "source_supported",
+        "critically_assessed"
+      ]
+    }
+  },
+  "required": [
+    "topic",
+    "proposed_title",
+    "research_problem",
+    "potential_contribution",
+    "required_resources",
+    "feasibility",
+    "uncertainty",
+    "next_validation_step",
+    "evidence_status"
+  ]
+}

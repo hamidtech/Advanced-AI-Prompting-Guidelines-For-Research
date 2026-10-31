@@ -1,0 +1,366 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Recorded model execution (not a plan)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "case_id",
+    "language",
+    "arm",
+    "repetition",
+    "repository_commit",
+    "prompt_sha256",
+    "scenario_sha256",
+    "evidence_packet_sha256",
+    "model_id",
+    "provider",
+    "executed_at",
+    "configuration",
+    "status",
+    "raw_output_sha256",
+    "scores",
+    "unsupported_claims",
+    "citation_errors",
+    "review_notes",
+    "artifact_locations",
+    "reviewer",
+    "integrity_flags"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "enum": [
+        "en",
+        "fa"
+      ]
+    },
+    "arm": {
+      "enum": [
+        "legacy",
+        "modern"
+      ]
+    },
+    "repetition": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "repository_commit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "model_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provider": {
+      "type": "string",
+      "minLength": 1
+    },
+    "executed_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})$"
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Record endpoint, tools, reasoning controls, output limit, supported sampling parameters, and unknown defaults."
+    },
+    "status": {
+      "enum": [
+        "completed",
+        "failed",
+        "blocked"
+      ]
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "relevance",
+        "feasibility",
+        "specificity",
+        "evidence_grounding",
+        "contribution",
+        "clarity"
+      ],
+      "properties": {
+        "relevance": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 4
+        },
+        "feasibility": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 4
+        },
+        "specificity": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 4
+        },
+        "evidence_grounding": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 4
+        },
+        "contribution": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 4
+        },
+        "clarity": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 4
+        }
+      }
+    },
+    "unsupported_claims": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "citation_errors": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "review_notes": {
+      "type": "string"
+    },
+    "prompt_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "scenario_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "evidence_packet_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "raw_output_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "artifact_locations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rendered_prompt",
+        "binding_map",
+        "source_packet",
+        "raw_output"
+      ],
+      "properties": {
+        "rendered_prompt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "binding_map": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "source_packet": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "raw_output": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      }
+    },
+    "reviewer": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "pseudonym": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expertise": {
+          "type": "string",
+          "minLength": 1
+        },
+        "independent": {
+          "type": "boolean"
+        },
+        "blinded": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "pseudonym",
+        "expertise",
+        "independent",
+        "blinded"
+      ],
+      "additionalProperties": false
+    },
+    "integrity_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "severity",
+          "explanation"
+        ],
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "minor",
+              "major",
+              "critical"
+            ]
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "raw_output_sha256": {
+            "type": "string"
+          },
+          "prompt_sha256": {
+            "type": "string"
+          },
+          "scenario_sha256": {
+            "type": "string"
+          },
+          "artifact_locations": {
+            "properties": {
+              "rendered_prompt": {
+                "type": "string"
+              },
+              "binding_map": {
+                "type": "string"
+              },
+              "raw_output": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "reviewer": {
+            "type": "null"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "scores": {
+            "properties": {
+              "relevance": {
+                "type": "null"
+              },
+              "feasibility": {
+                "type": "null"
+              },
+              "specificity": {
+                "type": "null"
+              },
+              "evidence_grounding": {
+                "type": "null"
+              },
+              "contribution": {
+                "type": "null"
+              },
+              "clarity": {
+                "type": "null"
+              }
+            }
+          },
+          "unsupported_claims": {
+            "type": "null"
+          },
+          "citation_errors": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

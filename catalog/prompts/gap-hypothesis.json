@@ -1,0 +1,27 @@
+{
+  "id": "RP-05",
+  "version": "2.0.0",
+  "name_en": "Research Gap Hypothesis Generator",
+  "name_fa": "فرضیه‌ساز شکاف پژوهشی",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "workflow_id": "WF-03",
+  "required_inputs": [
+    "DISCIPLINE",
+    "RESEARCH_INTEREST"
+  ],
+  "optional_inputs": [
+    "SOURCE_MATERIALS",
+    "RESEARCH_CONTEXT",
+    "TIME_CONSTRAINT",
+    "EXPLORATION_MODE"
+  ],
+  "exploration_mode": "Balanced",
+  "updated": "2026-10-31",
+  "files": {
+    "en": "gap-hypothesis.md",
+    "fa": "gap-hypothesis.fa.md"
+  }
+}

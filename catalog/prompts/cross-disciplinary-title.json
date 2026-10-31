@@ -1,0 +1,28 @@
+{
+  "id": "RP-04",
+  "version": "2.0.0",
+  "name_en": "Cross-Disciplinary Research Title Maker",
+  "name_fa": "عنوان‌ساز پژوهش میان‌رشته‌ای",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "workflow_id": "WF-01",
+  "required_inputs": [
+    "FIELD_A",
+    "FIELD_B",
+    "ACADEMIC_LEVEL"
+  ],
+  "optional_inputs": [
+    "AVAILABLE_DATA",
+    "METHODOLOGICAL_PREFERENCE",
+    "RESEARCH_CONTEXT",
+    "EXPLORATION_MODE"
+  ],
+  "exploration_mode": "Balanced",
+  "updated": "2026-10-31",
+  "files": {
+    "en": "cross-disciplinary-title.md",
+    "fa": "cross-disciplinary-title.fa.md"
+  }
+}

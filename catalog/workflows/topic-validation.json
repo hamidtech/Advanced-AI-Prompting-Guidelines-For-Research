@@ -1,0 +1,21 @@
+{
+  "id": "WF-02",
+  "version": "2.0.0",
+  "name_en": "Topic Validation",
+  "name_fa": "اعتبارسنجی موضوع پژوهش",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "prompt_ids": [
+    "RP-07",
+    "RP-10",
+    "RP-05",
+    "RP-08"
+  ],
+  "updated": "2026-10-31",
+  "files": {
+    "en": "topic-validation.md",
+    "fa": "topic-validation.fa.md"
+  }
+}

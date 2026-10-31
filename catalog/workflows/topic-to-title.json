@@ -1,0 +1,24 @@
+{
+  "id": "WF-01",
+  "version": "2.0.0",
+  "name_en": "Topic to Title",
+  "name_fa": "از علاقه تا عنوان پژوهش",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "prompt_ids": [
+    "RP-06",
+    "RP-01",
+    "RP-02",
+    "RP-03",
+    "RP-04",
+    "RP-07",
+    "RP-08"
+  ],
+  "updated": "2026-10-31",
+  "files": {
+    "en": "topic-to-title.md",
+    "fa": "topic-to-title.fa.md"
+  }
+}
