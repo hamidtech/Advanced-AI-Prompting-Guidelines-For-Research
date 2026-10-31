@@ -10,6 +10,27 @@ Decide whether a candidate deserves a proposal, revision, deferral, or rejection
 
 Required: candidate question/title, discipline and intended academic output, known deadline, and what is actually accessible. Unknown access is acceptable but cannot count as confirmed. Optional: degree regulations, a literature inventory, budget, skills, ethics constraints, equipment, language competence, and supervisor feedback. `[TOPIC]` is the candidate record; `[CONSTRAINTS]` lists these concrete limits.
 
+## Stages and decisions
+
+```mermaid
+flowchart TD
+    A["1. Assess relevance"] --> B["2. Check access and feasibility"]
+    B --> C["3. Assess contribution and evidence"]
+    C --> D{"Evidence sufficient for assessment?"}
+    D -->|No| E["Gap Verification; record limits"]
+    E --> C
+    D -->|Yes or explicitly unresolved| F["4. Human decision memo"]
+    F --> G{"Decision and binding conditions"}
+    G -->|Proceed| H["Next proposal stage"]
+    G -->|Revise| I["Narrow question or change design"]
+    I --> A
+    G -->|Defer| J["Resolve pending access or evidence"]
+    J --> B
+    G -->|Reject| K["Close candidate; retain reasons"]
+```
+
+Insufficient evidence may lead to deferral, not endless searching. A fatal permission or safety constraint cannot be cancelled by a favorable score.
+
 ## Step-by-step process
 
 | Stage | Copyable instruction | Output and verification |

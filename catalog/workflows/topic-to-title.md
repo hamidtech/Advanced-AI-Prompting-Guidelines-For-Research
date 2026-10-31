@@ -10,6 +10,25 @@ Turn an uncertain interest into a bounded research question and an honest workin
 
 Required: discipline or broad area, academic level, and the purpose of the work (thesis, article, or book). Optional: interests, disliked tasks, accessible materials, time, languages, methods, location, and institutional requirements. `[PROFILE]` means this brief personal research context; `[CANDIDATES]` means the resulting list, not published studies.
 
+## Stages and decisions
+
+```mermaid
+flowchart TD
+    A["1. Discover interests"] --> B{"Interest map approved?"}
+    B -->|Clarify| A
+    B -->|Yes| C["2. Explore candidate topics"]
+    C --> D["3. Shortlist and critique"]
+    D --> E{"Resource fit and human choice?"}
+    E -->|No viable candidate| C
+    E -->|Chosen candidate| F["4. Refine working title"]
+    F --> G{"Title matches question and scope?"}
+    G -->|Revise| F
+    G -->|Yes| H["Question, title and decision record"]
+    H --> I["Next: Topic Validation"]
+```
+
+Each numbered node matches a stage below. Approval and selection belong to the researcher; a working title still needs validation.
+
 ## Process and stage prompts
 
 | Stage | Action and copyable prompt | Intermediate output and checkpoint |

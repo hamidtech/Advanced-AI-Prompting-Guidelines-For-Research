@@ -14,21 +14,26 @@ Required: proposed gap statement, field, search scope, and known sources (an emp
 
 Use three distinct stages: **hypothesized gap** before checking; **evidence-supported observation** such as a pattern within the searched corpus; **critically assessed gap** only after considering contrary work, search limitations, and scholarly significance. No stage means definitive global novelty.
 
-## Decision map
+## Stages and decisions
 
 ```mermaid
 flowchart TD
-    A["Hypothesized gap"] --> B["Search and extract"]
-    B --> C{"Direct counterexample?"}
-    C -->|Yes| D["Reject or narrow claim"]
-    C -->|No| E{"Coverage adequate?"}
-    E -->|No| F["Unresolved: extend search"]
-    E -->|Within stated scope| G["Critically assess contribution"]
-    D --> B
-    F --> B
+    A["1. Bound claim and disconfirmation rule"] --> B["2. Search and log actual queries"]
+    B --> C["3. Screen and extract evidence"]
+    C --> D["4. Review contradictions"]
+    D --> E{"Direct counterexample?"}
+    E -->|Yes| F["5. Reject or narrow claim"]
+    F -->|Test revised hypothesis| A
+    E -->|No| G{"Coverage adequate within scope?"}
+    G -->|No| H["5. Unresolved; document limits"]
+    H -->|Extend search if feasible| B
+    G -->|Yes| I["5. Critically assess contribution"]
+    I --> J["Qualified assessment and human sign-off"]
+    H -->|Defer| J
+    F -->|Close original claim| J
 ```
 
-A bounded search can support a qualified assessment; it cannot prove universal novelty.
+The numbered nodes match all five stages. A bounded search supports a qualified assessment; it cannot prove universal novelty. Re-search only when access and the project budget permit.
 
 ## Process and stage prompts
 

@@ -9,6 +9,7 @@
 - Add metadata/evidence/topic schemas, synthetic fixtures, local checks and read-only SHA-pinned CI.
 - Add 30 bilingual evaluation scenarios, provisional rubric and controlled legacy/modern comparison protocol.
 - Mark all empirical model comparisons pending; no measured improvement or novelty claim.
+- Add aligned Mermaid stage/decision diagrams to all four workflows in English and Persian, including correction loops, human review and deferral paths.
 
 ## Historical lineage
 

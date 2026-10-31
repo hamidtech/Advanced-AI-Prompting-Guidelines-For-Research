@@ -12,6 +12,27 @@ Prerequisites: lawful access to a document or excerpt, a way to inspect it, and 
 
 Required: document or exact excerpt, available bibliographic details, review purpose, and desired language. Optional: identifier/URL, source version, extraction fields, citation style, relevant pages, multiple documents, and length target. `[DOCUMENT]` means only supplied accessible content; `[REVIEW_QUESTION]` is the question the evidence should inform; `[RECORDS]` are verified extractions, not model memory.
 
+## Stages and decisions
+
+```mermaid
+flowchart TD
+    A["1. Identify source and access scope"] --> B{"Readable and identity resolved?"}
+    B -->|No| C["Resolve metadata or obtain readable source"]
+    C --> A
+    B -->|Yes| D["2. Extract fields and source locators"]
+    D --> E["3. Verify and reconcile with original"]
+    E --> F{"Retained claims human-verified?"}
+    F -->|No| G["Correct or exclude unsupported claims"]
+    G --> D
+    F -->|Yes| H["4. Freeze reviewed evidence record"]
+    H --> I["5. Synthesize from approved records"]
+    I --> J{"Every factual clause supported?"}
+    J -->|No| E
+    J -->|Yes| K["Checked prose, evidence and issue log"]
+```
+
+Reported, missing, ambiguous and AI-inferred fields remain distinct throughout. Unresolved fields stay visible; only verified retained claims enter the synthesis. Stop affected extraction when source recovery is not possible.
+
 ## Process and stage prompts
 
 | Stage | Action and prompt | Output and checkpoint |
