@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "created",
+    "cases"
+  ],
+  "properties": {
+    "version": {
+      "const": "2.0.0"
+    },
+    "created": {
+      "type": "string",
+      "format": "date"
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 30,
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "discipline",
+          "condition",
+          "input",
+          "modern_prompt_id",
+          "modern_prompt_path",
+          "expected_checks",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "discipline": {
+            "enum": [
+              "engineering",
+              "life-sciences",
+              "social-sciences",
+              "humanities",
+              "theology"
+            ]
+          },
+          "condition": {
+            "enum": [
+              "no-topic",
+              "broad-interest",
+              "candidate-title",
+              "limited-resources",
+              "incomplete-evidence",
+              "interdisciplinary"
+            ]
+          },
+          "input": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "en",
+              "fa"
+            ],
+            "properties": {
+              "en": {
+                "type": "string",
+                "minLength": 30
+              },
+              "fa": {
+                "type": "string",
+                "minLength": 30
+              }
+            }
+          },
+          "modern_prompt_id": {
+            "enum": [
+              "RP-06",
+              "RP-01",
+              "RP-08",
+              "RP-10",
+              "RP-05",
+              "RP-04"
+            ]
+          },
+          "modern_prompt_path": {
+            "type": "string"
+          },
+          "expected_checks": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "const": "not-run"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "RP-02",
+  "version": "2.0.0",
+  "name_en": "Article Angle Explorer",
+  "name_fa": "کاوشگر زاویه‌های مقاله",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "workflow_id": "WF-01",
+  "required_inputs": [
+    "DISCIPLINE",
+    "RESEARCH_INTEREST"
+  ],
+  "optional_inputs": [
+    "AVAILABLE_DATA",
+    "TARGET_OUTLET",
+    "SOURCE_MATERIALS",
+    "RESEARCH_CONTEXT",
+    "EXPLORATION_MODE"
+  ],
+  "exploration_mode": "Balanced",
+  "updated": "2026-10-31",
+  "files": {
+    "en": "article-angle-explorer.md",
+    "fa": "article-angle-explorer.fa.md"
+  }
+}

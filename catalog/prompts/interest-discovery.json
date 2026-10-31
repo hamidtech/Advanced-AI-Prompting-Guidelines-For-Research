@@ -1,0 +1,26 @@
+{
+  "id": "RP-06",
+  "version": "2.0.0",
+  "name_en": "Research Interest Discovery",
+  "name_fa": "کشف علاقه پژوهشی",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "workflow_id": "WF-01",
+  "required_inputs": [
+    "ACTIVITIES_AND_PREFERENCES"
+  ],
+  "optional_inputs": [
+    "DISCIPLINE",
+    "ACADEMIC_LEVEL",
+    "RESEARCH_CONTEXT",
+    "EXPLORATION_MODE"
+  ],
+  "exploration_mode": "Balanced",
+  "updated": "2026-10-31",
+  "files": {
+    "en": "interest-discovery.md",
+    "fa": "interest-discovery.fa.md"
+  }
+}

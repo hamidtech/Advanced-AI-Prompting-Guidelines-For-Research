@@ -1,0 +1,28 @@
+{
+  "id": "RP-08",
+  "version": "2.0.0",
+  "name_en": "Research Title Refiner",
+  "name_fa": "پالایشگر عنوان پژوهش",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "workflow_id": "WF-01",
+  "required_inputs": [
+    "CANDIDATE_TITLE",
+    "RESEARCH_PROBLEM"
+  ],
+  "optional_inputs": [
+    "DISCIPLINE",
+    "METHODOLOGICAL_PREFERENCE",
+    "AVAILABLE_DATA",
+    "RESEARCH_CONTEXT",
+    "EXPLORATION_MODE"
+  ],
+  "exploration_mode": "Balanced",
+  "updated": "2026-10-31",
+  "files": {
+    "en": "title-refiner.md",
+    "fa": "title-refiner.fa.md"
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "version": "2.0.0",
+  "created": "2026-10-31",
+  "cases": [
+    {
+      "id": "engineering-01",
+      "discipline": "engineering",
+      "condition": "no-topic",
+      "input": {
+        "en": "I am an electrical engineering Master’s student with six months, Python skills, and no laboratory access. I do not yet know what research problem interests me. Ask focused questions before recommending a topic.",
+        "fa": "دانشجوی ارشد مهندسی برق هستم؛ شش ماه زمان و مهارت پایتون دارم و به آزمایشگاه دسترسی ندارم. هنوز مسئله مورد علاقه‌ام را نمی‌دانم. پیش از پیشنهاد موضوع، سؤال‌های هدفمند بپرس."
+      },
+      "modern_prompt_id": "RP-06",
+      "modern_prompt_path": "catalog/prompts/interest-discovery.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Ask no more than three focused questions before final recommendations."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "engineering-02",
+      "discipline": "engineering",
+      "condition": "broad-interest",
+      "input": {
+        "en": "Explore three Master’s topics on heat management in electric-vehicle batteries. I have simulation software but no experimental cells. Treat commercial performance specifications as unverified unless sources are supplied.",
+        "fa": "سه موضوع ارشد درباره مدیریت حرارتی باتری خودرو برقی بررسی کن. نرم‌افزار شبیه‌سازی دارم ولی سلول آزمایشی ندارم. مشخصات عملکرد تجاری را بدون منبع تأییدشده ندان."
+      },
+      "modern_prompt_id": "RP-01",
+      "modern_prompt_path": "catalog/prompts/thesis-brainstormer.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Offer three bounded alternatives with explicit evidence status."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "engineering-03",
+      "discipline": "engineering",
+      "condition": "candidate-title",
+      "input": {
+        "en": "Refine the title “AI makes every bridge safe.” The actual study predicts sensor anomalies in one anonymized bridge dataset; it cannot establish structural safety or causation.",
+        "fa": "عنوان «هوش مصنوعی همه پل‌ها را ایمن می‌کند» را اصلاح کن. مطالعه واقعی، ناهنجاری حسگرها را در مجموعه‌داده بی‌نام یک پل پیش‌بینی می‌کند و ایمنی سازه یا علیت را اثبات نمی‌کند."
+      },
+      "modern_prompt_id": "RP-08",
+      "modern_prompt_path": "catalog/prompts/title-refiner.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Remove unsupported causal, universal, or doctrinal certainty."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "engineering-04",
+      "discipline": "engineering",
+      "condition": "limited-resources",
+      "input": {
+        "en": "Assess a proposed autonomous drone inspection thesis: twelve weeks, no drone, no flight authorization, a laptop with 8 GB RAM, and an open image dataset whose license has not been checked. Offer a viable revision and a stop condition.",
+        "fa": "امکان‌سنجی پایان‌نامه بازرسی خودکار با پهپاد: دوازده هفته زمان، بدون پهپاد و مجوز پرواز، لپ‌تاپ با رم ۸ گیگابایت و مجموعه‌تصاویر بازی که مجوزش بررسی نشده. نسخه عملی و شرط توقف پیشنهاد بده."
+      },
+      "modern_prompt_id": "RP-10",
+      "modern_prompt_path": "catalog/prompts/feasibility-assessor.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Respect resource and approval constraints; include a stop or revision decision."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "engineering-05",
+      "discipline": "engineering",
+      "condition": "incomplete-evidence",
+      "input": {
+        "en": "My notes say “most concrete studies ignore desert conditions,” but I have only two abstracts, neither supplied here. Suggest testable gap hypotheses and a search plan; do not conclude that desert studies do not exist.",
+        "fa": "یادداشت من می‌گوید «بیشتر مطالعات بتن شرایط بیابانی را نادیده می‌گیرند»، اما فقط دو چکیده دیده‌ام که اینجا ارائه نشده‌اند. فرضیه شکاف قابل بررسی و برنامه جست‌وجو بده؛ نبود مطالعات بیابانی را نتیجه نگیر."
+      },
+      "modern_prompt_id": "RP-05",
+      "modern_prompt_path": "catalog/prompts/gap-hypothesis.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Treat the gap as hypothesized; include a contradiction search and source-verification plan."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "engineering-06",
+      "discipline": "engineering",
+      "condition": "interdisciplinary",
+      "input": {
+        "en": "Connect acoustic engineering and heritage conservation through a noninvasive study of one historical performance hall. Propose titles, explain what each discipline contributes, and flag building-access and recording permissions.",
+        "fa": "مهندسی آکوستیک و حفاظت میراث را در مطالعه غیرتهاجمی یک تالار تاریخی پیوند بده. عنوان پیشنهاد کن، سهم هر رشته و مجوز ورود و ضبط را توضیح بده."
+      },
+      "modern_prompt_id": "RP-04",
+      "modern_prompt_path": "catalog/prompts/cross-disciplinary-title.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Explain each discipline’s contribution and epistemic limits."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "life-sciences-01",
+      "discipline": "life-sciences",
+      "condition": "no-topic",
+      "input": {
+        "en": "I am a biology Master’s student unsure whether I prefer ecology, molecular biology, or scientific data analysis. I have four months and no wet-lab access. Help discover interests without assuming quantitative research is my preference.",
+        "fa": "دانشجوی ارشد زیست‌شناسی هستم و بین بوم‌شناسی، زیست‌شناسی مولکولی و تحلیل داده علمی مرددم. چهار ماه وقت دارم و به آزمایشگاه تر دسترسی ندارم. بدون فرض علاقه من به پژوهش کمی، در کشف علاقه کمک کن."
+      },
+      "modern_prompt_id": "RP-06",
+      "modern_prompt_path": "catalog/prompts/interest-discovery.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Ask no more than three focused questions before final recommendations."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "life-sciences-02",
+      "discipline": "life-sciences",
+      "condition": "broad-interest",
+      "input": {
+        "en": "Explore possible projects on urban pollinator diversity using observational field notes. I can visit three parks weekly for one season; species identification support is uncertain. Distinguish description from causal effects.",
+        "fa": "پروژه‌هایی درباره تنوع گرده‌افشان‌های شهری با یادداشت میدانی پیشنهاد کن. یک فصل می‌توانم هر هفته سه پارک را ببینم؛ کمک برای شناسایی گونه‌ها قطعی نیست. توصیف را از اثر علّی جدا کن."
+      },
+      "modern_prompt_id": "RP-01",
+      "modern_prompt_path": "catalog/prompts/thesis-brainstormer.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Offer three bounded alternatives with explicit evidence status."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "life-sciences-03",
+      "discipline": "life-sciences",
+      "condition": "candidate-title",
+      "input": {
+        "en": "Refine “A new cure for diabetes from gene expression.” The actual proposal reanalyzes a public transcriptomic dataset with no clinical trial. State an appropriately limited research question and title.",
+        "fa": "عنوان «درمان جدید دیابت از بیان ژن» را اصلاح کن. طرح واقعی بازتحلیل یک مجموعه‌داده عمومی ترنسکریپتومیک است و کارآزمایی بالینی ندارد. سؤال و عنوان متناسب با این محدودیت بنویس."
+      },
+      "modern_prompt_id": "RP-08",
+      "modern_prompt_path": "catalog/prompts/title-refiner.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Remove unsupported causal, universal, or doctrinal certainty."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "life-sciences-04",
+      "discipline": "life-sciences",
+      "condition": "limited-resources",
+      "input": {
+        "en": "Assess a student proposal to culture pathogenic bacteria at home. No biosafety facility, institutional supervision, or approval is available. Explain why this design cannot proceed and propose safe secondary-data alternatives.",
+        "fa": "طرح دانشجو برای کشت باکتری بیماری‌زا در خانه را ارزیابی کن. امکانات ایمنی زیستی، نظارت دانشگاه و تأییدیه وجود ندارد. توضیح بده چرا این طراحی قابل اجرا نیست و جایگزین امن با داده ثانویه پیشنهاد کن."
+      },
+      "modern_prompt_id": "RP-10",
+      "modern_prompt_path": "catalog/prompts/feasibility-assessor.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Respect resource and approval constraints; include a stop or revision decision."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "life-sciences-05",
+      "discipline": "life-sciences",
+      "condition": "incomplete-evidence",
+      "input": {
+        "en": "A supplied synthetic abstract states only: “Twenty samples were sequenced; differences were observed.” No organism, comparison, effect size, or protocol is given. Extract reported and missing information and propose bounded gap hypotheses.",
+        "fa": "چکیده ساختگی ارائه‌شده فقط می‌گوید: «بیست نمونه توالی‌یابی شد؛ تفاوت‌هایی مشاهده شد.» ارگانیسم، مقایسه، اندازه اثر و پروتکل مشخص نیست. اطلاعات گزارش‌شده و ناموجود را جدا کن و فرضیه شکاف محدود پیشنهاد بده."
+      },
+      "modern_prompt_id": "RP-05",
+      "modern_prompt_path": "catalog/prompts/gap-hypothesis.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Treat the gap as hypothesized; include a contradiction search and source-verification plan."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "life-sciences-06",
+      "discipline": "life-sciences",
+      "condition": "interdisciplinary",
+      "input": {
+        "en": "Develop a biology–public policy topic about mosquito monitoring and municipal action using aggregated surveillance reports. Separate biological inference from policy recommendation and protect location-sensitive records.",
+        "fa": "موضوعی میان زیست‌شناسی و سیاست‌گذاری عمومی درباره پایش پشه‌ها و اقدام شهرداری با گزارش‌های تجمیعی پیشنهاد کن. استنباط زیستی را از توصیه سیاستی جدا کن و محرمانگی داده مکانی حساس را در نظر بگیر."
+      },
+      "modern_prompt_id": "RP-04",
+      "modern_prompt_path": "catalog/prompts/cross-disciplinary-title.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Explain each discipline’s contribution and epistemic limits."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "social-sciences-01",
+      "discipline": "social-sciences",
+      "condition": "no-topic",
+      "input": {
+        "en": "I study IT management and have no thesis topic. I enjoy observing work routines but do not know whether I prefer interviews or text analysis. I have five months and need help exploring interests before choosing a method.",
+        "fa": "مدیریت فناوری اطلاعات می‌خوانم و موضوع پایان‌نامه ندارم. مشاهده روال‌های کاری را دوست دارم ولی بین مصاحبه و تحلیل متن مرددم. پنج ماه فرصت دارم؛ پیش از انتخاب روش در کشف علاقه کمک کن."
+      },
+      "modern_prompt_id": "RP-06",
+      "modern_prompt_path": "catalog/prompts/interest-discovery.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Ask no more than three focused questions before final recommendations."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "social-sciences-02",
+      "discipline": "social-sciences",
+      "condition": "broad-interest",
+      "input": {
+        "en": "Explore employee adoption of internal AI assistants in a medium-sized organization. I may interview volunteers, but usage logs are not approved for release. Compare qualitative and survey approaches without promising causal identification.",
+        "fa": "پذیرش دستیار هوش مصنوعی داخلی توسط کارکنان یک سازمان متوسط را بررسی کن. احتمال مصاحبه با داوطلبان هست ولی انتشار لاگ مصرف مجاز نشده. رویکرد کیفی و پیمایشی را بدون ادعای شناسایی علّی مقایسه کن."
+      },
+      "modern_prompt_id": "RP-01",
+      "modern_prompt_path": "catalog/prompts/thesis-brainstormer.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Offer three bounded alternatives with explicit evidence status."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "social-sciences-03",
+      "discipline": "social-sciences",
+      "condition": "candidate-title",
+      "input": {
+        "en": "Refine “The impact of remote work on productivity everywhere.” My data are self-reported survey responses from one company collected once; the sample is voluntary. Avoid causal and universal claims.",
+        "fa": "عنوان «تأثیر دورکاری بر بهره‌وری در همه‌جا» را اصلاح کن. داده‌ها خوداظهاری یک پیمایش مقطعی در یک شرکت با نمونه داوطلب است. ادعای علّی و تعمیم جهانی نکن."
+      },
+      "modern_prompt_id": "RP-08",
+      "modern_prompt_path": "catalog/prompts/title-refiner.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Remove unsupported causal, universal, or doctrinal certainty."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "social-sciences-04",
+      "discipline": "social-sciences",
+      "condition": "limited-resources",
+      "input": {
+        "en": "Assess sentiment analysis of customer complaints: eight weeks, 120 consented Persian comments, no GPU, and personally identifying details in raw text. Compare a modest manual/assisted coding study with training a deep model from scratch.",
+        "fa": "تحلیل احساسات شکایت مشتریان را امکان‌سنجی کن: هشت هفته، ۱۲۰ نظر فارسی با رضایت، بدون GPU و با اطلاعات هویتی در متن خام. کدگذاری دستی یا کمکی محدود را با آموزش مدل عمیق از صفر مقایسه کن."
+      },
+      "modern_prompt_id": "RP-10",
+      "modern_prompt_path": "catalog/prompts/feasibility-assessor.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Respect resource and approval constraints; include a stop or revision decision."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "social-sciences-05",
+      "discipline": "social-sciences",
+      "condition": "incomplete-evidence",
+      "input": {
+        "en": "I found three studies reporting positive associations between dashboards and decision speed, but have not searched for null findings. Formulate a gap hypothesis and design a contradiction search; do not claim dashboards improve decision quality.",
+        "fa": "سه مطالعه با ارتباط مثبت داشبورد و سرعت تصمیم دیده‌ام، ولی نتایج بدون ارتباط را جست‌وجو نکرده‌ام. فرضیه شکاف و جست‌وجوی شواهد مخالف طراحی کن؛ بهبود کیفیت تصمیم را ادعا نکن."
+      },
+      "modern_prompt_id": "RP-05",
+      "modern_prompt_path": "catalog/prompts/gap-hypothesis.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Treat the gap as hypothesized; include a contradiction search and source-verification plan."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "social-sciences-06",
+      "discipline": "social-sciences",
+      "condition": "interdisciplinary",
+      "input": {
+        "en": "Combine organizational psychology and NLP to investigate how support-ticket language reflects coordination problems. The company permits only deidentified tickets. Specify what text patterns can and cannot establish about employees.",
+        "fa": "روان‌شناسی سازمانی و پردازش زبان را برای بررسی بازتاب مشکلات هماهنگی در زبان تیکت پشتیبانی پیوند بده. شرکت فقط تیکت بی‌نام می‌دهد. مشخص کن الگوهای متنی چه چیزی درباره کارکنان نشان می‌دهند و چه چیزی را اثبات نمی‌کنند."
+      },
+      "modern_prompt_id": "RP-04",
+      "modern_prompt_path": "catalog/prompts/cross-disciplinary-title.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Explain each discipline’s contribution and epistemic limits."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "humanities-01",
+      "discipline": "humanities",
+      "condition": "no-topic",
+      "input": {
+        "en": "I am a literature Master’s student who enjoys close reading but has not selected a period, corpus, or theory. I read Persian and intermediate French. Help explore interests without prescribing computational analysis.",
+        "fa": "دانشجوی ارشد ادبیات هستم و خوانش دقیق را دوست دارم، اما دوره، پیکره یا نظریه انتخاب نکرده‌ام. فارسی و فرانسه متوسط می‌دانم. بدون تحمیل تحلیل محاسباتی در کشف علاقه کمک کن."
+      },
+      "modern_prompt_id": "RP-06",
+      "modern_prompt_path": "catalog/prompts/interest-discovery.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Ask no more than three focused questions before final recommendations."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "humanities-02",
+      "discipline": "humanities",
+      "condition": "broad-interest",
+      "input": {
+        "en": "Explore interpretations of exile in two modern Persian poetry collections. I have legally obtained editions, four months, and no access to author archives. Explain alternative interpretive lenses and their limits.",
+        "fa": "تفسیرهای تبعید در دو مجموعه شعر معاصر فارسی را بررسی کن. نسخه قانونی دارم، چهار ماه فرصت و بدون دسترسی به آرشیو نویسنده. چارچوب‌های تفسیری جایگزین و محدودیتشان را توضیح بده."
+      },
+      "modern_prompt_id": "RP-01",
+      "modern_prompt_path": "catalog/prompts/thesis-brainstormer.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Offer three bounded alternatives with explicit evidence status."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "humanities-03",
+      "discipline": "humanities",
+      "condition": "candidate-title",
+      "input": {
+        "en": "Refine “All translation destroys the truth of poetry.” The project compares three translations of one poem and examines metaphor shifts; it cannot establish a universal theory of truth.",
+        "fa": "عنوان «هر ترجمه‌ای حقیقت شعر را نابود می‌کند» را اصلاح کن. پروژه سه ترجمه یک شعر را با تمرکز بر تغییر استعاره مقایسه می‌کند و نظریه جهانی حقیقت را اثبات نمی‌کند."
+      },
+      "modern_prompt_id": "RP-08",
+      "modern_prompt_path": "catalog/prompts/title-refiner.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Remove unsupported causal, universal, or doctrinal certainty."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "humanities-04",
+      "discipline": "humanities",
+      "condition": "limited-resources",
+      "input": {
+        "en": "Assess a proposed critical edition of a medieval manuscript when I have only low-resolution scans of one witness, no paleography training, and ten weeks. Propose a defensible smaller descriptive study and identify what must remain unresolved.",
+        "fa": "تصحیح انتقادی یک نسخه قرون میانه را ارزیابی کن: فقط اسکن کم‌کیفیت یک نسخه، بدون آموزش نسخه‌خوانی و ده هفته فرصت دارم. مطالعه توصیفی کوچک‌تر قابل دفاع و موارد حل‌نشده را مشخص کن."
+      },
+      "modern_prompt_id": "RP-10",
+      "modern_prompt_path": "catalog/prompts/feasibility-assessor.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Respect resource and approval constraints; include a stop or revision decision."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "humanities-05",
+      "discipline": "humanities",
+      "condition": "incomplete-evidence",
+      "input": {
+        "en": "A secondary note claims “no one has studied silence in this novel,” but no bibliography or edition is supplied. Design a multilingual search and distinguish an interpretive possibility from an established absence in scholarship.",
+        "fa": "یادداشت ثانویه می‌گوید «هیچ‌کس سکوت در این رمان را بررسی نکرده»، اما کتاب‌شناسی یا مشخصات چاپ ندارد. جست‌وجوی چندزبانه طراحی کن و امکان تفسیری را از نبود اثبات‌شده پژوهش جدا کن."
+      },
+      "modern_prompt_id": "RP-05",
+      "modern_prompt_path": "catalog/prompts/gap-hypothesis.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Treat the gap as hypothesized; include a contradiction search and source-verification plan."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "humanities-06",
+      "discipline": "humanities",
+      "condition": "interdisciplinary",
+      "input": {
+        "en": "Connect literary translation studies and digital humanities through comparison of a small aligned corpus of translated metaphors. Preserve close reading and explain how automated similarity can miss irony and cultural context.",
+        "fa": "مطالعات ترجمه ادبی و علوم انسانی دیجیتال را با مقایسه پیکره کوچک هم‌تراز استعاره‌های ترجمه‌شده پیوند بده. خوانش دقیق را حفظ کن و ناتوانی شباهت خودکار در فهم کنایه و زمینه فرهنگی را توضیح بده."
+      },
+      "modern_prompt_id": "RP-04",
+      "modern_prompt_path": "catalog/prompts/cross-disciplinary-title.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Explain each discipline’s contribution and epistemic limits."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "theology-01",
+      "discipline": "theology",
+      "condition": "no-topic",
+      "input": {
+        "en": "I am a theology Master’s student uncertain between historical theology, ethics, and textual interpretation. I can read Persian and Arabic. Help identify interests, ask about my tradition and aims, and do not assume a confessional or secular position.",
+        "fa": "دانشجوی ارشد الهیات هستم و بین الهیات تاریخی، اخلاق و تفسیر متن مرددم. فارسی و عربی می‌خوانم. در کشف علاقه کمک کن، درباره سنت و هدفم بپرس و موضع دینی یا سکولار را فرض نگیر."
+      },
+      "modern_prompt_id": "RP-06",
+      "modern_prompt_path": "catalog/prompts/interest-discovery.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Ask no more than three focused questions before final recommendations."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "theology-02",
+      "discipline": "theology",
+      "condition": "broad-interest",
+      "input": {
+        "en": "Explore approaches to hospitality in two specified theological commentaries, whose editions I will supply later. Compare historical-contextual and normative questions without treating one tradition’s interpretation as universal.",
+        "fa": "رویکردهای مهمان‌نوازی در دو شرح الهیاتی را بررسی کن که مشخصات چاپشان را بعداً می‌دهم. سؤال تاریخی و هنجاری را مقایسه کن و تفسیر یک سنت را جهان‌شمول ندان."
+      },
+      "modern_prompt_id": "RP-01",
+      "modern_prompt_path": "catalog/prompts/thesis-brainstormer.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Offer three bounded alternatives with explicit evidence status."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "theology-03",
+      "discipline": "theology",
+      "condition": "candidate-title",
+      "input": {
+        "en": "Refine “Proving the only correct meaning of justice in religion.” The intended work compares justice terminology in three passages and two commentaries from one tradition. Keep the interpretive scope and standpoint explicit.",
+        "fa": "عنوان «اثبات تنها معنای درست عدالت در دین» را اصلاح کن. کار موردنظر مقایسه اصطلاح عدالت در سه قطعه و دو شرح از یک سنت است. دامنه تفسیری و موضع پژوهش را روشن نگه دار."
+      },
+      "modern_prompt_id": "RP-08",
+      "modern_prompt_path": "catalog/prompts/title-refiner.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Remove unsupported causal, universal, or doctrinal certainty."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "theology-04",
+      "discipline": "theology",
+      "condition": "limited-resources",
+      "input": {
+        "en": "Assess a comparative thesis on unpublished religious archives in four countries with no travel funding, no archive permission, and one semester. Propose a feasible published-text corpus without pretending it represents the inaccessible archives.",
+        "fa": "پایان‌نامه تطبیقی درباره آرشیوهای دینی منتشرنشده چهار کشور را امکان‌سنجی کن: بدون بودجه سفر، مجوز آرشیو و با یک ترم وقت. پیکره متن منتشرشده عملی پیشنهاد کن و آن را نماینده آرشیوهای دور از دسترس ندان."
+      },
+      "modern_prompt_id": "RP-10",
+      "modern_prompt_path": "catalog/prompts/feasibility-assessor.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Respect resource and approval constraints; include a stop or revision decision."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "theology-05",
+      "discipline": "theology",
+      "condition": "incomplete-evidence",
+      "input": {
+        "en": "I have one translated quotation claiming a theologian rejected free will; the original text, edition, and surrounding argument are missing. Design verification steps and bounded research questions without attributing a settled doctrine.",
+        "fa": "یک نقل‌قول ترجمه‌شده دارم که می‌گوید متکلمی اختیار را رد کرده؛ اصل متن، چاپ و استدلال پیرامونی موجود نیست. مراحل راستی‌آزمایی و پرسش محدود طراحی کن و آموزه قطعی به او نسبت نده."
+      },
+      "modern_prompt_id": "RP-05",
+      "modern_prompt_path": "catalog/prompts/gap-hypothesis.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Treat the gap as hypothesized; include a contradiction search and source-verification plan."
+      ],
+      "status": "not-run"
+    },
+    {
+      "id": "theology-06",
+      "discipline": "theology",
+      "condition": "interdisciplinary",
+      "input": {
+        "en": "Connect religious ethics and AI governance through a comparative textual study of accountability. Specify chosen traditions and translation limits, distinguish normative argument from empirical claims, and avoid speaking for all believers.",
+        "fa": "اخلاق دینی و حکمرانی هوش مصنوعی را در مطالعه تطبیقی متنی درباره پاسخ‌گویی پیوند بده. سنت‌های منتخب و محدودیت ترجمه را مشخص کن، استدلال هنجاری را از ادعای تجربی جدا کن و از طرف همه مؤمنان سخن نگو."
+      },
+      "modern_prompt_id": "RP-04",
+      "modern_prompt_path": "catalog/prompts/cross-disciplinary-title.md",
+      "expected_checks": [
+        "Do not invent sources, data access, or measured results.",
+        "State material uncertainty and a concrete next validation step.",
+        "Explain each discipline’s contribution and epistemic limits."
+      ],
+      "status": "not-run"
+    }
+  ]
+}

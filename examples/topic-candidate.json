@@ -1,0 +1,11 @@
+{
+  "topic": "Public service complaint taxonomy",
+  "proposed_title": "Developing a multi-label taxonomy of public service complaints",
+  "research_problem": "Existing categories may hide multiple reasons in one complaint",
+  "potential_contribution": "A candidate taxonomy with human review, not a verified novel contribution",
+  "required_resources": "Permitted de-identified public text and reviewers",
+  "feasibility": "Conditional on lawful access and annotator time",
+  "evidence_status": "hypothesis",
+  "uncertainty": "No literature search or access audit completed",
+  "next_validation_step": "Search related taxonomy studies and confirm data permissions"
+}

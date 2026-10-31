@@ -1,0 +1,29 @@
+{
+  "id": "RP-01",
+  "version": "2.0.0",
+  "name_en": "Focused Thesis Brainstormer",
+  "name_fa": "ایده‌پرداز متمرکز پایان‌نامه",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "workflow_id": "WF-01",
+  "required_inputs": [
+    "DISCIPLINE",
+    "ACADEMIC_LEVEL",
+    "RESEARCH_INTEREST"
+  ],
+  "optional_inputs": [
+    "AVAILABLE_DATA",
+    "METHODOLOGICAL_PREFERENCE",
+    "TIME_CONSTRAINT",
+    "RESEARCH_CONTEXT",
+    "EXPLORATION_MODE"
+  ],
+  "exploration_mode": "Balanced",
+  "updated": "2026-10-31",
+  "files": {
+    "en": "thesis-brainstormer.md",
+    "fa": "thesis-brainstormer.fa.md"
+  }
+}

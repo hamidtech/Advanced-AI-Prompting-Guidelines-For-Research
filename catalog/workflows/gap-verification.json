@@ -1,0 +1,20 @@
+{
+  "id": "WF-03",
+  "version": "2.0.0",
+  "name_en": "Gap Verification",
+  "name_fa": "راستی‌آزمایی شکاف پژوهشی",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "prompt_ids": [
+    "RP-05",
+    "RP-09",
+    "RP-07"
+  ],
+  "updated": "2026-10-31",
+  "files": {
+    "en": "gap-verification.md",
+    "fa": "gap-verification.fa.md"
+  }
+}

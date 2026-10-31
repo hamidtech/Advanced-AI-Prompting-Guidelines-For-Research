@@ -1,0 +1,8 @@
+{
+  "status": "pending",
+  "date": "2026-10-31",
+  "model_runs": 0,
+  "human_ratings": 0,
+  "reason": "No external model execution or qualified human rating has been performed. Infrastructure and fixtures are not empirical results.",
+  "improvement_claim": null
+}

@@ -1,0 +1,28 @@
+{
+  "id": "RP-03",
+  "version": "2.0.0",
+  "name_en": "Book Concept Explorer",
+  "name_fa": "کاوشگر ایده کتاب",
+  "languages": [
+    "en",
+    "fa"
+  ],
+  "workflow_id": "WF-01",
+  "required_inputs": [
+    "BOOK_SCOPE",
+    "AUDIENCE"
+  ],
+  "optional_inputs": [
+    "DISCIPLINE",
+    "SOURCE_MATERIALS",
+    "RESEARCH_CONTEXT",
+    "TIME_CONSTRAINT",
+    "EXPLORATION_MODE"
+  ],
+  "exploration_mode": "Balanced",
+  "updated": "2026-10-31",
+  "files": {
+    "en": "book-concept-explorer.md",
+    "fa": "book-concept-explorer.fa.md"
+  }
+}
